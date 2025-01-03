@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toogle Bulb (Method-1)</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      button {
+        margin-top: 16px;
+        border-radius: 5px;
+        height: 32px;
+        width: 88px;
+        border: 0.1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Turn the bulb ON or OFF</h1>
+
+    <!-- Button to trigger image change -->
+    <button id="togglebtn1">Turn ON</button>
+
+    <!-- Image of the light bulb -->
+    <img id="myImage" src="image/pic_bulboff.gif" style="width: 230px" />
+
+    <!-- Button to trigger image change -->
+    <button id="togglebtn2">Turn OFF</button>
+
+    <script>
+      // Get the image and button elements
+      let img1 = document.getElementById("myImage");
+      let btn1 = document.getElementById("togglebtn1");
+      let btn2 = document.getElementById("togglebtn2");
+      let holeBg = document.querySelector("body");
+
+      // Add event listener to btn1
+      btn1.addEventListener("click", () => {
+        // Check the image source using endsWith() to handle the full URL
+        if (img1.src.endsWith("image/pic_bulboff.gif")) {
+          img1.src = "image/pic_bulbon.gif"; // Change to "on" image
+        }
+        holeBg.style.backgroundColor = "bisque";
+      });
+
+      // Add Event Listner to btn2
+      btn2.addEventListener("click", () => {
+        // Check the image source using includes()
+        if (img1.src.includes("image/pic_bulbon.gif")) {
+          img1.src = "image/pic_bulboff.gif";
+        }
+        holeBg.style.backgroundColor = "white";
+      });
+    </script>
+  </body>
+</html>

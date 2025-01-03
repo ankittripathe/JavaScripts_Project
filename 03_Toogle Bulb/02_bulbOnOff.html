@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb On Off (Method-2)</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      button {
+        margin-top: 16px;
+        border-radius: 5px;
+        height: 32px;
+        width: 88px;
+        border: 0.1px solid black;
+      }
+
+      img{
+        height: 50vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Toogle the Bulb ON or OFF</h1>
+      <img src="image/pic_bulboff.gif" alt="bulb_off" />
+    </div>
+    <button>Turn ON</button>
+
+    <script>
+      // Selecting Elements
+      const holeBg = document.querySelector("body");
+      const myImg = document.querySelector("img");
+      const btn = document.querySelector("button");
+
+      // Adding Event Listner
+      btn.addEventListener("click", () => {
+        if (myImg.src.includes("image/pic_bulboff.gif")) {
+          myImg.src = "image/pic_bulbon.gif";
+          holeBg.style.backgroundColor = "bisque";
+          btn.innerHTML = "Turn OFF";
+        } else {
+          myImg.src = "image/pic_bulboff.gif";
+          holeBg.style.backgroundColor = "white";
+          btn.innerHTML = "Turn On";
+        }
+      });
+    </script>
+  </body>
+</html>
