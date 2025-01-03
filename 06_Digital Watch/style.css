@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:black;
+    color: #fff;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#clock {
+    background-color: rgb(247, 113, 23);
+    font-size: 40px;
+    margin-top: 10px;
+    padding: 20px 50px;
+    border-radius: 10px
+}
+
+
+#banner {
+    font-size: 50px;
+}
+
+#dateUi {
+    background-color: rgb(247, 113, 23);
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 20px 50px;
+    border-radius: 10px
+}
