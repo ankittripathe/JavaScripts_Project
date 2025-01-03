@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30vh;
+  }
+
+  button {
+    display: block;
+    margin: auto;
+    height: 5vh;
+    width: 10vw;
+    margin-top: 5vh;
+  }
+
+  .dark {
+    background-color: black;
+    color: white;
+  }
+
+  .light {
+    background-color: white;
+    color: black;
+  }
