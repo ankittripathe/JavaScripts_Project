@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background-color: wheat;
+}
+
+
+span {
+  display: block;
+}
+
+.main {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+#orange {
+  background: orange;
+}
+
+#white {
+  background: white;
+}
+
+#blue {
+  background: blue;
+}
+
+#yellow {
+  background: yellow;
+}
+
+#lightgreen {
+  background: lightgreen;
+}
+
+#salmon {
+  background: salmon;
+}
