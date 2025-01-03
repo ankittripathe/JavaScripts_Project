@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator (Using Internal JavaScripts)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="calculator">
+      <input type="text" id="display" />
+
+      <div class="button-container">
+        <button
+          class="button red"
+          onclick="currentDisplay = ''; displayOutput()"
+        >
+          AC
+        </button>
+
+        <button class="button" onclick="currentDisplay += '1'; displayOutput()">
+          1
+        </button>
+
+        <button class="button" onclick="currentDisplay += '2'; displayOutput()">
+          2
+        </button>
+
+        <button
+        class="button red"
+        onclick="currentDisplay = currentDisplay.slice(0, -1); displayOutput();"
+      >
+        DEL
+      </button>
+      
+
+        <button class="button" onclick="currentDisplay += '3';displayOutput()">
+          3
+        </button>
+
+        <button class="button" onclick="currentDisplay += '4'; displayOutput()">
+          4
+        </button>
+
+        <button class="button" onclick="currentDisplay += '+'; displayOutput()">
+          +
+        </button>
+
+        <button class="button" onclick="currentDisplay += '5'; displayOutput()">
+          5
+        </button>
+
+        <button class="button" onclick="currentDisplay += '6'; displayOutput()">
+          6
+        </button>
+
+        <button class="button" onclick="currentDisplay += '-'; displayOutput()">
+          -
+        </button>
+
+        <button class="button" onclick="currentDisplay += '7'; displayOutput()">
+          7
+        </button>
+
+        <button class="button" onclick="currentDisplay += '8'; displayOutput()">
+          8
+        </button>
+
+        <button class="button" onclick="currentDisplay += '*'; displayOutput()">
+          *
+        </button>
+
+        <button class="button" onclick="currentDisplay += '9'; displayOutput()">
+          9
+        </button>
+
+        <button class="button" onclick="currentDisplay += '0'; displayOutput()">
+          0
+        </button>
+
+        <button class="button" onclick="currentDisplay += '/'; displayOutput()">
+          /
+        </button>
+
+        <button
+          class="button"
+          onclick="currentDisplay = eval(currentDisplay); displayOutput() "
+        >
+          =
+        </button>
+
+        <button
+          class="button"
+          onclick="currentDisplay += '00'; displayOutput()"
+        >
+          00
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let currentDisplay = "";
+
+      function displayOutput() {
+        let input = document.getElementById("display");
+        input.value = currentDisplay;
+      }
+    </script>
+  </body>
+</html>
